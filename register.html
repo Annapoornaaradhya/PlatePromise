@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register | PlatePromise</title>
+    <link
+      rel="icon"
+      href="Screenshot 2024-11-23 154406.png"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom CSS -->
+    <style>
+      .hidden {
+        display: none;
+      }
+
+      /* Style for select dropdown */
+      .form-group select {
+        width: 100%;
+        height: 45px; /* Adjust the height as needed */
+        font-size: 16px; /* Ensure text is readable */
+        padding: 10px; /* Add padding for better spacing */
+      }
+
+      /* Custom style for the Register Now button */
+      .btn-register {
+        padding: 10px 25px;
+        border-radius: 30px;
+        font-size: 1rem;
+
+        font-weight: bold;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+        transition: all 0.3s ease-in-out; /* Smooth transition for hover effect */
+        background-color: #14e20d; /* Bootstrap success green */
+        border: none; /* Remove default border */
+      }
+
+      .btn-register:hover {
+        background-color: #f5f5f5;
+        color: #121212; /* Darker green on hover */
+        transform: translateY(-2px); /* Slight lift on hover */
+      }
+
+      .btn-register:active {
+        background-color: #ffffff; /* Even darker green on click */
+        transform: translateY(0); /* Reset the lift on click */
+      }
+
+      .btn-register:focus {
+        outline: none; /* Remove the focus outline */
+      }
+
+      /* Custom button style */
+      .btn-home {
+        padding: 10px 25px;
+        border-radius: 30px;
+        font-size: 1rem;
+
+        font-weight: bold;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+        transition: all 0.3s ease-in-out; /* Smooth transition for hover effect */
+      }
+
+      .btn-home:hover {
+        background-color: #f5f5f5;
+        color: #121212; /* Darker shade of blue */
+        transform: translateY(-2px); /* Slight lift on hover */
+      }
+
+      .btn-home:active {
+        background-color: #ffffff; /* Even darker blue on click */
+        transform: translateY(0); /* Reset the lift on click */
+      }
+
+      .btn-home:focus {
+        outline: none; /* Remove the focus outline */
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Header Section -->
+    <header class="header">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+          <a class="navbar-brand" href="#home">PlatePromise</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarNav"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#donations">Donations</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#missions">Missions</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#about">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#contact">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Register Section -->
+    <section class="register-section">
+      <div class="container">
+        <div class="heading text-center">
+          <h2>Register Your Organization</h2>
+          <p>
+            Join us in our mission to reduce food waste and help those in need.
+          </p>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <form action="register.php" method="POST" class="contact-form">
+              <!-- Organization Type Dropdown -->
+              <div class="form-group">
+                <label for="org_type">Select Organization Type</label>
+                <select
+                  name="org_type"
+                  id="org_type"
+                  class="form-control"
+                  onchange="toggleFields(this.value)"
+                  required
+                >
+                  <option value="" selected>Select any one</option>
+                  <option value="restaurant">Restaurant</option>
+                  <option value="ngo">NGO</option>
+                </select>
+              </div>
+
+              <!-- Common Fields -->
+              <div class="form-group">
+                <label for="org_name">Organization Name</label>
+                <input
+                  id="org_name"
+                  type="text"
+                  name="org_name"
+                  class="form-control"
+                  placeholder="Enter Organization Name"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="contact_person">Contact Person</label>
+                <input
+                  id="contact_person"
+                  type="text"
+                  name="contact_person"
+                  class="form-control"
+                  placeholder="Enter Contact Person Name"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="email">Email Address</label>
+                <input
+                  id="email"
+                  type="email"
+                  name="email"
+                  class="form-control"
+                  placeholder="Enter Email Address"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input
+                  id="phone"
+                  type="text"
+                  name="phone"
+                  class="form-control"
+                  placeholder="Enter Phone Number"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="address">Address</label>
+                <input
+                  id="address"
+                  type="text"
+                  name="address"
+                  class="form-control"
+                  placeholder="Enter Address"
+                  required
+                />
+              </div>
+
+              <!-- Restaurant-specific Fields -->
+              <div id="restaurant_fields" class="hidden">
+                <div class="form-group">
+                  <label for="license_number">License Number</label>
+                  <input
+                    id="license_number"
+                    type="text"
+                    name="license_number"
+                    class="form-control"
+                    placeholder="Enter License Number"
+                  />
+                </div>
+              </div>
+
+              <!-- NGO-specific Fields -->
+              <div id="ngo_fields" class="hidden">
+                <div class="form-group">
+                  <label for="ngo_id">NGO Registration ID</label>
+                  <input
+                    id="ngo_id"
+                    type="text"
+                    name="ngo_id"
+                    class="form-control"
+                    placeholder="Enter NGO Registration ID"
+                  />
+                </div>
+              </div>
+
+              <!-- Password Fields -->
+              <div class="form-group">
+                <label for="password">Password</label>
+                <input
+                  id="password"
+                  type="password"
+                  name="password"
+                  class="form-control"
+                  placeholder="Enter Password"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="confirm_password">Confirm Password</label>
+                <input
+                  id="confirm_password"
+                  type="password"
+                  name="confirm_password"
+                  class="form-control"
+                  placeholder="Confirm Password"
+                  required
+                />
+              </div>
+
+              <!-- Submit Button -->
+              <div class="form-group text-center">
+                <button type="submit" class="btn btn-success btn-register">
+                  Register Now
+                </button>
+              </div>
+
+              <div class="form-group text-center">
+                <a href="index.html" class="btn btn-primary btn-home"
+                  >Go to Home</a
+                >
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="col-one">
+              <h4>PlatePromise</h4>
+              <p>
+                Address: 3, Near IT Park, Mahatma Gandhi Road, Bengaluru 560001
+              </p>
+              <p>Contact No: <a href="tel:+91986593359">+91 986593359</a></p>
+              <p>
+                Email:
+                <a href="mailto:platepromise@gmail.com"
+                  >platepromise@gmail.com</a
+                >
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="col-two">
+              <h4>Important Links</h4>
+              <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#donations">Donations</a></li>
+                <li><a href="#missions">Missions</a></li>
+                <li><a href="#about">About us</a></li>
+                <li><a href="#contact">Contact us</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="col-one">
+              <h4>Social Media</h4>
+              <div class="social">
+                <a href="#"
+                  ><img src="img/icons/facebook.png" alt="facebook"
+                /></a>
+                <a href="#"
+                  ><img src="img/icons/instagram.png" alt="instagram"
+                /></a>
+                <a href="#"
+                  ><img src="img/icons/youtube.png" alt="youtube"
+                /></a>
+                <a href="#"
+                  ><img src="img/icons/linkedin.png" alt="linkedin"
+                /></a>
+                <a href="#"><img src="img/icons/gmail.png" alt="gmail" /></a>
+              </div>
+              <p>Copyright &copy; 2022 | All Rights Reserved</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- JavaScript to toggle fields based on organization type -->
+    <script>
+      // Initialize the form based on the default selected option (Restaurant)
+      document.addEventListener("DOMContentLoaded", function () {
+        toggleFields(document.getElementById("org_type").value);
+      });
+
+      // Function to toggle fields based on selected organization type
+      function toggleFields(orgType) {
+        const restaurantFields = document.getElementById("restaurant_fields");
+        const ngoFields = document.getElementById("ngo_fields");
+
+        if (orgType === "restaurant") {
+          restaurantFields.classList.remove("hidden");
+          ngoFields.classList.add("hidden");
+          restaurantFields
+            .querySelector('input[name="license_number"]')
+            .setAttribute("required", "required");
+          ngoFields
+            .querySelector('input[name="ngo_id"]')
+            .removeAttribute("required");
+        } else if (orgType === "ngo") {
+          restaurantFields.classList.add("hidden");
+          ngoFields.classList.remove("hidden");
+          ngoFields
+            .querySelector('input[name="ngo_id"]')
+            .setAttribute("required", "required");
+          restaurantFields
+            .querySelector('input[name="license_number"]')
+            .removeAttribute("required");
+        }
+      }
+
+      // Password match validation and redirection
+      document.querySelector("form").addEventListener("submit", function (e) {
+        const password = document.querySelector('input[name="password"]').value;
+        const confirmPassword = document.querySelector(
+          'input[name="confirm_password"]'
+        ).value;
+
+        if (password !== confirmPassword) {
+          e.preventDefault(); // Prevent form submission
+          alert("Passwords do not match. Please try again.");
+        } else {
+          alert("Registration successful! Redirecting to the homepage...");
+          window.location.href = "index.html"; // Redirect to homepage
+        }
+      });
+    </script>
+  </body>
+</html>
