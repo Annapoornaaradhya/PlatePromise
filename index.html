@@ -1,103 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PlatePromise
-    </title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/responsive.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
-</head>
-
-<body>
-    <div class="fixed-top">
-
-        <header>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>PlatePromise</title>
+        <link rel="icon" href="Screenshot 2024-11-23 154406.png" type="image/x-icon" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/style.css">
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    </head>
+    
+    <body>
+ 
+        <!-- Header Section -->
+        <header class="header">
             <div class="container">
                 <nav class="navbar navbar-expand-lg navbar-dark">
                     <a class="navbar-brand" href="#home">PlatePromise</a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse"
-                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
                         <span class="navbar-toggler-icon"></span>
                     </button>
-
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav ml-auto">
-                            <li class="nav-item active">
-                                <a class="nav-link" href="#home">Home <span class="sr-only">(current)</span></a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#donations">Donations</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#mission-id">Missions</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#about">About</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#contact">Contact</a>
-                            </li>
+                            <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#donations">Donations</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#missions">Missions</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                            <!-- Register link -->
+                            <li class="nav-item"><a href="register.html" class="btn btn-custom">Register Now</a></li>
                         </ul>
                     </div>
                 </nav>
+                
             </div>
         </header>
-
-        <div class="cont-sec">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-6">
-                        <p>Contact No : <a href="tel: +91986593359">+91 986593359</a></p>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="social">
-                            <a href="#"><img src="img/icons/facebook.png" alt="facebook"></a>
-                            <a href="#"><img src="img/icons/instagram.png" alt="inatagram"></a>
-                            <a href="#"><img src="img/icons/youtube.png" alt="youtube"></a>
-                            <a href="#"><img src="img/icons/linkedin.png" alt="linkedin"></a>
-                            <a href="#"><img src="img/icons/gmail.png" alt="gnail"></a>
-                        </div>
-                    </div>
+    
+        
+<!-- Home Section -->
+<section class="home-section" id="home">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 text-white">
+                <h1 class="display-4">Together, We Can Make A Difference</h1>
+                <p>Minimizing food waste and helping those in need.</p>
+                <a href="register.html" class="btn btn-custom">Register Now</a>
+            </div>
+            <div class="col-lg-6 order-first order-lg-last">
+                <div class="img-sec">
+                    <img src="img/back.jpg" alt="home-image" class="img-fluid">
                 </div>
             </div>
         </div>
-
     </div>
-    <section class="home-sec" id="home">
-        <div class="container">
-            <div class="home-content">
-                <div class="row">
-                    <div class="col-lg-6 align-item-center">
-                        <div class="home-info">
-                            <h1>Alone we can do little, together we can do so much</h1>
-                            <h2>We <span>PlatePromise</span> manage and reduce wastage of food and help for needy peoples</h2>
-                            <div class="buttons">
-                                <a href="#contact" class="btn1">Donate now</a>
-                            </div>
+</section>
+
+<!-- Login Section -->
+<section class="login-section" id="login">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 offset-lg-3">
+                <div class="login-form">
+                    <h2>Login to Your Account</h2>
+                    <form>
+                        <div class="form-group">
+                            <input type="email" class="form-control" placeholder="Email Address" required>
                         </div>
-                    </div>
-                    <div class="col-lg-6 order-first order-lg-last">
-                        <div class="img-sec">
-                            <img src="img/miss/4.jpg" alt="home-image">
+                        <div class="form-group">
+                            <input type="password" class="form-control" placeholder="Password" required>
                         </div>
-                    </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-custom">Login</button>
+                        </div>
+                    </form>
+                    <p class="text-center">Don't have an account? <a href="register.html">Register Now</a></p>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
+
+        
+
 
     <section class="don-sec" id="donation">
         <div class="container">
             <div class="heading">
-                <h2>We Manage Wastage like..</h2>
+                <h2>We Manage...</h2>
             </div>
             <div class="row">
                 <div class="col-lg-4">
@@ -116,25 +108,23 @@
     <section class="mission" id="mission-id">
         <div class="container">
             <div class="heading">
-                <h2>Our Missions</h2>
+                <h2>Our Mission</h2>
                 <p>At PlatePromise, our mission is to minimize food waste while addressing food insecurity.<br> By leveraging technology, we aim to create a sustainable, scalable solution that promotes eco-friendly practices and fosters a culture of community care in the food industry.<br>
             </div>
             <div class="gallery-sec">
                 <div class="container">
-                    <div class="image-container">
-                        <div class="image"><img src="img/miss/img2.jpg" alt="img"></div>
-                        <div class="image"><img src="img/miss/img4.jpg" alt="img"></div>
-                        <div class="image"><img src="img/miss/img1.jpg" alt="img"></div>
-                        <div class="image"><img src="img/miss/img5.jpg" alt="img"></div>
-                        <div class="image"><img src="img/miss/img3.jpg" alt="img"></div>
-                        <div class="image"><img src="img/miss/img6.jpg" alt="img"></div>
-                    </div>
+                  <div class="image-container">
+                    <div class="image"><img src="img/miss/img2.jpg" alt="Mission 1"></div>
+                    <div class="image"><img src="img/miss/img4.jpg" alt="Mission 2"></div>
+                    <div class="image"><img src="img/miss/img1.jpg" alt="Mission 3"></div>
+                    <div class="image"><img src="img/miss/img5.jpg" alt="Mission 4"></div>
+                    <div class="image"><img src="img/miss/img3.jpg" alt="Mission 5"></div>
+                    <div class="image"><img src="img/miss/img6.jpg" alt="Mission 6"></div>
+                  </div>
                 </div>
-                <div class="pop-image">
-                    <span>&times;</span>
-                    <img src="img/icons/don/images1.jpg" alt="gallery-img">
-                </div>
-                </div>
+              </div>
+              
+               
             </div>
     </section>
 
@@ -142,19 +132,20 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-4 about-img">
-                    <img src="img/image.jpg" alt="about">
+                    <!-- Adjust the image size using class or inline style -->
+                    <img src="img\miss\4.jpg" alt="about" class="img-fluid about-img-size">
                 </div>
                 <div class="col-lg-8 order-first order-lg-last">
                     <div class="heading">
                         <h2>What We Do & Why We Do</h2>
                     </div>
-                    <p>PlatePromise is driven by the belief that every meal matters.By creating a platform to manage and redistribute surplus food, we aim to reduce waste and minimize its environmental impact.</p>
-                    <p>By bridging the gap between surplus food and those in need, we are not just addressing food waste—we're contributing to a more equitable, sustainable, and compassionate world.By connecting restaurants, volunteers, and NGOs, we encourage collaboration and innovation to solve real-world challenges, creating a positive ripple effect across society.</p>
+                    <p>PlatePromise is driven by the belief that every meal matters. By creating a platform to manage and redistribute surplus food, we aim to reduce waste and minimize its environmental impact.</p>
+                    <p>By bridging the gap between surplus food and those in need, we are not just addressing food waste—we're contributing to a more equitable, sustainable, and compassionate world. By connecting restaurants, volunteers, and NGOs, we encourage collaboration and innovation to solve real-world challenges, creating a positive ripple effect across society.</p>
                 </div>
             </div>
         </div>
     </section>
-
+    
         <!-- Contact Section -->
         <section class="contact-section" id="contact">
             <div class="container">
@@ -164,41 +155,41 @@
                 </div>
                 <div class="row">
                     <div class="col-lg-12 mt-5">
-                        <form class="contact-form">
+                        <!-- Form submits to submit_form.php -->
+                        <form class="contact-form" method="POST" action="submit_form.php">
                             <div class="row">
                                 <div class="col-lg-12">
                                     <div class="row">
                                         <div class="col-lg-6">
                                             <div class="col-lg-12">
                                                 <div class="form-group">
-                                                    <input type="text" class="form-control" placeholder="Your Name">
+                                                    <input type="text" class="form-control" name="name" placeholder="Your Name" required>
                                                 </div>
                                             </div>
                                             <div class="col-lg-12">
                                                 <div class="form-group">
-                                                    <input type="text" class="form-control" placeholder="Mobile No.">
+                                                    <input type="text" class="form-control" name="mobile" placeholder="Mobile No." required>
                                                 </div>
                                             </div>
                                             <div class="col-lg-12">
                                                 <div class="form-group">
-                                                    <select name="donation" id="donation">
+                                                    <select name="donation" id="donation" required>
                                                         <option value="">Choose Donation or Wastage</option>
                                                         <option value="food">Food</option>
                                                     </select>
                                                 </div>
                                             </div>
-                                            
                                         </div>
                                         <div class="col-lg-6">
                                             <div class="form-group">
-                                                <input type="text" class="form-control" placeholder="Address">
+                                                <input type="text" class="form-control" name="address" placeholder="Address" required>
                                             </div>
                                             <div class="form-group">
-                                                <textarea class="form-control" name="text" id="" cols="90" rows="1" placeholder="Message"></textarea>
+                                                <textarea class="form-control" name="message" cols="90" rows="1" placeholder="Message" required></textarea>
                                             </div>
                                         </div>
                                         <div class="col-md-12 mt-3">
-                                            <a href="#" class="btn1 mt-5">Submit Details</a>
+                                            <button type="submit" class="btn1 mt-5">Submit Details</button>
                                         </div>
                                     </div>
                                 </div>
@@ -208,6 +199,21 @@
                 </div>
             </div>
         </section>
+        
+        <div id="googleMap" style="width:100%;height:400px;"></div>
+
+<script>
+function myMap() {
+  var mapProp = {
+    center: new google.maps.LatLng(12.9716, 77.5946), // Bangalore coordinates
+    zoom: 10, // Adjusted zoom for city-level view
+  };
+  var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
+}
+</script>
+
+<script src="https://maps.gomaps.pro/maps/api/js?key=AlzaSybemZVWvSFSAGOPqUqt-Fwotu6MwlvvvZp&callback=myMap"></script>
+
 
     <footer>
         <div class="container">
