@@ -1,332 +1,494 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
-
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-    scroll-behavior: smooth;
+/* Reset and Fonts */
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background-color: #121212;
+  color: #f5f5f5;
 }
-
-body{
-    margin: 0;
+a {
+  color: inherit;
+  text-decoration: none;
 }
-
-/* Heading */
-.heading h2{
-    font-size: 28px;
-    font-weight: 500;
-    border-left: 8px solid #303054;
-    padding: 5px 15px;
-    margin-bottom: 15px;
-}
-.heading p{
-    font-size: 18px;
-}
-.heading p span{
-    font-weight: 600;
-    color: #303054;
-}
-
-/* Buttons */
-.btn1{
-    font-size: 1rem;
-    font-weight: 400;
-    background-color: #303054;
-    color: #fff;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-decoration: none !important;
-    transition: all 0.5s;
-}
-.btn1:hover{
-    background-color: #e6edff;
-    color: #303054;
+a:hover {
+  color: #0d42e2;
 }
 
 /* Header */
-header{
-    background-color: #303054;
-    width: 100%;
-    
+header {
+  background-color: #1f1f1f;
+  padding: 10px 0;
+  border-bottom: 1px solid #333;
 }
 
-header .navbar-brand{
-    font-size: 22px;
-    font-weight: 600;
-    color: #fff;
+header .navbar-brand {
+  font-size: 24px;
+  font-weight: bold;
+  color: #f5f5f5;
 }
 
-nav{
-    padding: 8px 0px !important;
+header .nav-link {
+  color: #fff; /* Initial color is white */
+  margin-right: 15px;
+  position: relative; /* For positioning the underline */
+  transition: color 0.3s ease, border-bottom 0.3s ease; /* Smooth transitions */
 }
 
-.cont-sec{
-    padding: 8px;
-    background-color: #e6edff;
-    width: 100%;
+header .nav-link:hover {
+  color: #14e20d; /* Change text color to contrast color (green) */
+  border-bottom: 2px solid #14e20d; /* Half underline with color contrast */
+  padding-bottom: 4px; /* Adjust padding for better visual effect */
+}
+header .btn-custom {
+  background-color: #14e20d;
+  color: #121212;
+  padding: 10px 25px;
+  border-radius: 30px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+header .btn-custom:hover {
+  background-color: #f5f5f5;
+  color: #121212;
 }
 
-.cont-sec .contact-cont{
-    display: flex;
-    flex-wrap: wrap;
-}
-.cont-sec p{
-    margin: 0;
-}
+/* Home Section */
 
-.cont-sec p a{
-    text-decoration: none;
-    color: #303054;
-}
-
-.cont-sec .social{
-    text-align: right
+.home-section {
+  padding: 100px 0;
+  text-align: center;
+  background-image: url("img/back.jpg"); /* Correct path to your image */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* Optional: for parallax effect */
+  color: #f5f5f5;
+  position: relative;
+  height: 100vh; /* Ensure the section has enough height to display the background image */
 }
 
-.cont-sec .social a img{
-    width: 20px;
-    margin-left: 15px;
+.home-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ); /* Optional dark overlay for better readability */
+  z-index: 1;
 }
 
-.home-sec{
-    /* height: 100vh; */
-    padding: 100px 0;
+.home-section h1,
+.home-section p,
+.home-section .btn-custom {
+  position: relative;
+  z-index: 2; /* Ensure text is above the overlay */
 }
 
-.home-sec .home-content {
-    align-items: center;
+.home-section h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.home-section p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+.home-section .btn-custom {
+  background-color: #14e20d;
+  color: #121212;
+  padding: 10px 25px;
+  border-radius: 30px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+.home-section .btn-custom:hover {
+  background-color: #f5f5f5;
+  color: #121212;
+}
+.home-section .img-sec {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-.home-sec .home-content h1{
-    font-size: 2.3rem;
-    font-weight: 600;
-    margin-bottom: 20px;
-
-} 
-.home-sec .home-content h2 span{
-    color: #14e20d;
+.home-section .img-sec img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-.home-sec .home-content h2{
-    font-size: 1.8rem;
-    font-weight: 600;
-    margin-bottom: 30px;
-}
-.home-sec .home-content p{
-    font-size: 1.3rem;
-    margin-bottom: 30px;
+.home-section .home-content {
+  align-items: center;
+  padding: 90px 0;
 }
 
-.home-sec .img-sec{
-    display: flex;
-    justify-content: center;
+/* Style for the login section with a dark theme */
+.login-section {
+  padding: 10px 0;
+  background-color: #000000; /* Dark background */
+  color: white; /* Light text for contrast */
 }
 
-.home-sec .img-sec img{
-    width: 400px;
+.login-form {
+  background: #222; /* Darker background for the form itself */
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
-.home-sec .home-content{
-    align-items: center;
-    padding: 150px 0;
+.login-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #fff; /* White text for the heading */
 }
 
-/* About section */
-.about-sec{
-    padding: 150px 0;
-    background-color: #e6edff;
+.login-form .form-group {
+  margin-bottom: 15px;
 }
 
-.about-sec img{
-    width: 350px;
-    border: 5px solid #303054;
-    border-radius: 5px;
+.login-form .form-control {
+  padding: 12px;
+  border-radius: 5px;
+  border: 1px solid #444; /* Darker border */
+  background-color: #555; /* Dark input background */
+  color: white; /* White text in inputs */
 }
 
-.about-sec .about-txt p{
-    font-size: 18px;
+.login-form .form-control::placeholder {
+  color: #ccc; /* Light placeholder text */
 }
 
-/* Donation Section */
-.don-sec{
-    background-color: #e6edff;
-    padding: 150px 0;
+.login-form .btn-custom {
+  background-color: #28a745; /* Custom green button */
+  color: white;
+  border: none;
+  padding: 12px;
+  width: 100%;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
-.don-sec .don-box{
-    margin: 50px 0;
-    background-color: #fff;
-    padding: 50px;
-    text-align: center;
-    border-radius: 5px;
-    box-shadow: 0 0 15px #b4afaf;
-    transition: all 1s;
+.login-form .btn-custom:hover {
+  background-color: #218838; /* Darker green on hover */
 }
 
-.don-sec .don-box img{
-    width: 70px;
-    transition: all 1s;
+.login-form p {
+  text-align: center;
+  margin-top: 15px;
+  color: #ddd; /* Lighter text for the link */
 }
 
-.don-sec .don-box h3{
-    margin: 15px 0 10px;
+.login-form p a {
+  color: #28a745;
+  text-decoration: none;
 }
 
-.don-sec .don-box p{
-    margin-bottom: 25px;
+.login-form p a:hover {
+  text-decoration: underline;
+}
+.about-img-size {
+  max-width: 100%; /* Adjust this value to make the image smaller */
+  height: auto; /* Maintain aspect ratio */
+  margin-right: 10px; /* Optional, adds space to the right of the image */
 }
 
-.don-sec .don-box:hover img{
-    transform: scale(1.1);
+/* Sections (General Styling) */
+section {
+  padding: 80px 0;
+}
+section .heading h2 {
+  font-size: 2.5rem;
+  color: #f5f5f5;
+  margin-bottom: 20px;
+}
+section .heading p {
+  font-size: 1.2rem;
+  color: #b3b3b3;
 }
 
-/* Missions */
-.mission{
-    padding: 150px 0;
+/* Responsive Design */
+@media (max-width: 991px) {
+  header .navbar-brand {
+    font-size: 20px;
+  }
+  header .nav-link {
+    font-size: 14px;
+  }
+  .home-section h1 {
+    font-size: 2.5rem;
+  }
+}
+@media (max-width: 768px) {
+  .home-section h1 {
+    font-size: 2rem;
+  }
+  .home-section p {
+    font-size: 1rem;
+  }
 }
 
-
-.gallery-sec{
-	position: relative;
-	padding: 50px 0;
+/* Social Media Icons Styling */
+.social {
+  display: flex;
+  justify-content: center;
+  gap: 15px; /* Spacing between icons */
+  margin-top: 20px;
 }
 
-.gallery-sec .image-container{
-	display: flex;
-	flex-wrap: wrap;
-	gap: 15px;
-	justify-content: center;
-	padding: 10px;
+.social a {
+  display: inline-block;
+  width: 40px; /* Icon size */
+  height: 40px;
+  border-radius: 50%; /* Make icons circular */
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.gallery-sec .image-container .image{
-	height: 200px;
-	width: 300px;
-	box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-	cursor: pointer;
-	overflow: hidden;
+.social a img {
+  width: 100%; /* Ensure the image fits within the circle */
+  height: 100%;
+  object-fit: cover;
 }
 
-.gallery-sec .image-container .image img{
-	height: 100%;
-	width: 100%;
-	border: 5px solid #d4d4d4;
-	object-fit: cover;
-	transition: 0.2s linear;
+.social a:hover {
+  transform: scale(1.1); /* Slight zoom effect */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
 }
 
-.gallery-sec .image-container .image:hover img{
-	transform: scale(1.1);
+/* Mission Section Images - Three per Row */
+.gallery-sec .image-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Create three equal columns */
+  gap: 20px; /* Spacing between images */
+  justify-items: center; /* Center images in their cells */
 }
 
-.gallery-sec .pop-image{
-	position: fixed;
-	left: 0;
-	top: 0;
-	background: rgba(0, 0, 0, 0.8);
-	height: 100%;
-	width: 100%;
-	z-index: 100;
-	display: none;
+.gallery-sec .image {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px; /* Rounded corners for the images */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.gallery-sec .pop-image span{
-	position: absolute;
-	top: 120px;
-	right: 50px;
-	font-size: 60px;
-	font-weight: bolder;
-	color: #ffffff;
-	cursor: pointer;
-	z-index: 100;
+.gallery-sec .image img {
+  width: 100%;
+  height: 200px; /* Maintain consistent height */
+  object-fit: cover; /* Crop images to fit perfectly */
 }
 
-.gallery-sec .pop-image img{
-	position: absolute;
-	top: 55%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	border: 3px solid #ffffff;
-	width: 750px;
-	object-fit: cover;
+.gallery-sec .image:hover {
+  transform: scale(1.05); /* Slight zoom on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
 }
 
-/* Conatact Us */
+/* Center Align Donation Section Content */
+.don-sec .row {
+  display: flex;
+  justify-content: center; /* Centers the items horizontally */
+  align-items: center; /* Centers the items vertically, if needed */
+  flex-wrap: wrap; /* Allows items to wrap to the next row if necessary */
+}
+
+/* Donation Boxes Styling */
+.don-sec .don-box {
+  text-align: center; /* Centers the content inside the boxes */
+  margin: 20px; /* Adds space between the boxes */
+  padding: 20px;
+  background: #1f1f1f;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  max-width: 300px; /* Limits the box width */
+}
+
+.don-sec .don-box img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+.don-sec .don-box:hover {
+  transform: scale(1.05); /* Adds hover effect */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Contact Section */
 .contact-section {
-    padding: 150px 0 80px;
+  background-color: #000000; /* Dark background for contrast */
+  padding: 40px 0;
+  color: #f5f5f5;
 }
 
-.contact-section .contact-form .form-group {
-    margin-bottom: 20px;
+/* Heading in Contact Section */
+.contact-section .heading {
+  text-align: center;
+  margin-bottom: 40px;
 }
 
-.contact-section .contact-form .form-control {
-    height: 50px;
-    border-radius: 5px;
+.contact-section .heading h2 {
+  font-size: 2.5rem;
+  color: #f5f5f5;
+  font-weight: bold;
+  margin-bottom: 10px;
 }
 
-.contact-section .contact-form textarea.form-control {
-    height: 120px;
-    margin-bottom: 10px;
+.contact-section .heading p {
+  font-size: 1.1rem;
+  color: #b3b3b3;
 }
 
-.contact-section .contact-form .form-control:focus {
-    box-shadow: none;
+/* Contact Form Styling */
+.contact-form .form-group {
+  margin-bottom: 20px;
 }
 
-
-
-
-/* Footer */
-footer{
-    background-color: #303054;
-    color: #e6edff;
-    padding: 50px 0;
-}
-footer h4{
-    margin-bottom: 20px;
-}
-footer p a{
-    text-decoration: none;
-    color: #e6edff;
-}
-footer p a:hover{
-    text-decoration: none;
-    color: #e6edff;
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  width: 100%;
+  padding: 15px;
+  background-color: #1f1f1f;
+  border: 1px solid #444;
+  border-radius: 10px;
+  color: #f5f5f5;
+  font-size: 1rem;
+  transition: all 0.3s ease;
 }
 
-
-footer .col-two ul li{
-    list-style: none;
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+  border-color: #14e20d; /* Focus border color */
+  outline: none;
 }
 
-footer .col-two ul li a{
-    color: #e6edff;
-    text-decoration: none;
-    transition: all 0.5s;
-}
-footer .col-two ul li a:hover{
-    margin-left: 5px;
-}
-footer .social{
-    margin-bottom: 30px;
-}
-footer .social a img{
-    width: 20px;
-    margin-right: 15px;
+/* Textarea Styling */
+.contact-form textarea {
+  resize: vertical;
+  height: 150px;
 }
 
-/* Scroll Bar */
-
-::-webkit-scrollbar{
-    width: 5px;
+/* Submit Button Styling */
+.contact-form .btn1 {
+  background-color: #14e20d;
+  color: #121212;
+  padding: 15px 30px;
+  border-radius: 30px;
+  font-size: 1.2rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  display: inline-block;
+  margin-top: 20px;
 }
 
-::-webkit-scrollbar-track{
-    border: 7px solid transparent;
+.contact-form .btn1:hover {
+  background-color: #f5f5f5;
+  color: #121212;
+  cursor: pointer;
 }
 
-::-webkit-scrollbar-thumb{
-    background: #303054;
+/* Media Query for Smaller Devices */
+@media (max-width: 767px) {
+  .contact-form .form-group {
+    margin-bottom: 15px;
+  }
+
+  .contact-form input,
+  .contact-form select,
+  .contact-form textarea {
+    padding: 12px;
+    font-size: 0.9rem;
+  }
+
+  .contact-form .btn1 {
+    padding: 12px 25px;
+    font-size: 1rem;
+  }
+}
+
+/* Space between Map and Footer */
+#googleMap {
+  margin-bottom: 50px; /* Adjust this value to add space between the map and footer */
+}
+
+footer {
+  background-color: #1f1f1f;
+  color: #f5f5f5;
+  padding: 20px 0; /* Adjust padding as needed */
+  text-align: center;
+  margin-top: auto; /* Push footer to the bottom */
+}
+
+footer .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+footer .col-one,
+footer .col-two {
+  flex: 1;
+  padding: 15px;
+  text-align: left;
+}
+
+footer .col-one h4,
+footer .col-two h4 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+footer ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+footer ul li {
+  margin-bottom: 10px;
+}
+
+footer ul li a {
+  color: #f5f5f5;
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+
+footer ul li a:hover {
+  color: #14e20d; /* Contrast color for hover */
+}
+
+/* Social Media Icons */
+footer .social {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+footer .social a {
+  text-decoration: none;
+}
+
+footer .social img {
+  width: 30px;
+  height: 30px;
+  transition: transform 0.3s ease;
+}
+
+footer .social img:hover {
+  transform: scale(1.1);
+}
+
+/* Copyright Text */
+footer p {
+  margin-top: 20px;
+  font-size: 0.9rem;
 }
