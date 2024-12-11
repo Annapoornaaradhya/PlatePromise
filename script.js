@@ -1,10 +1,12 @@
-document.querySelectorAll('.image-container img').forEach(image => {
-    image.onclick = () => {
-        document.querySelector('.pop-image').style.display = 'block';
-        document.querySelector('.pop-image img').src = image.getAttribute('src');
-    }
+// Pop-Up Image Viewer
+document.querySelectorAll(".gallery img").forEach((image) => {
+  image.addEventListener("click", () => {
+    const popup = document.querySelector(".popup");
+    const popupImage = popup.querySelector("img");
+    popup.style.display = "flex";
+    popupImage.src = image.src;
+  });
 });
-
-document.querySelector('.pop-image span').onclick = () => {
-    document.querySelector('.pop-image').style.display = 'none';
-}
+document.querySelector(".popup span").addEventListener("click", () => {
+  document.querySelector(".popup").style.display = "none";
+});
