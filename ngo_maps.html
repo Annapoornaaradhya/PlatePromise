@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Maps and Places Autocomplete</title>
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/@googlemaps/extended-component-library/0.6.11/index.min.js">
+    </script>
+    <link rel="stylesheet" href="styles.css"/>
+  </head>
+  <body>
+    <gmpx-api-loader key="AIzaSyDBE9a6DfXn6J9k1hziT2yHFqLBkrlczDY" solution-channel="GMP_GE_mapsandplacesautocomplete_v2">
+    </gmpx-api-loader>
+    <gmp-map center="40.749933,-73.98633" zoom="13" map-id="DEMO_MAP_ID">
+      <div slot="control-block-start-inline-start" class="place-picker-container">
+        <gmpx-place-picker placeholder="india"></gmpx-place-picker>
+      </div>
+      <gmp-advanced-marker></gmp-advanced-marker>
+    </gmp-map>
+    <script src="map.js"></script>
+  </body>
+</html>
