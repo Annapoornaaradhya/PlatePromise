@@ -1,4 +1,4 @@
-# # 🍽️ PlatePromise - Every Extra Bite Counts Towards a Better Tomorrow
+## 🍽️ PlatePromise - Every Extra Bite Counts Towards a Better Tomorrow
 
 ### 🌍 Rescue. Redistribute. Revive.
 *PlatePromise* is an AI-powered food rescue platform dedicated to minimizing food waste and fighting hunger. We connect restaurants with surplus food to NGOs that serve communities in need—because every extra bite matters!  
