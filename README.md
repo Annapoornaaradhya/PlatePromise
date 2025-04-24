@@ -4,6 +4,9 @@
 *PlatePromise* is an AI-powered food rescue platform dedicated to minimizing food waste and fighting hunger. We connect restaurants with surplus food to NGOs that serve communities in need—because every extra bite matters!  
 
 ---
+[![DOI](https://zenodo.org/badge/893398316.svg)](https://doi.org/10.5281/zenodo.15275361)
+
+---
 
 ## 🚀 Features
 ✅ **Restaurant & NGO Dashboards** – Seamless food donation and tracking.  
